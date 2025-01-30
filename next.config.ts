@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
-import './src/env/server.mjs';
-import './src/env/client.mjs';
+import './src/env/server.js';
+import './src/env/client.js';
 
 const nextConfig: NextConfig = {
   /* config options here */
