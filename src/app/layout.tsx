@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Provider from "@/components/provider";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "UniShop - Buy & Sell on Campus",
@@ -18,10 +18,14 @@ export default function RootLayout({
       <body
         className={`antialiased`}
         >
-          <Provider>
-        {children}
-        </Provider>
-      </body>
+          <ThemeProvider 
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange>
+            {children}
+          </ThemeProvider>
+        </body>
     </html>
   );
 }
